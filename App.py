@@ -16,7 +16,7 @@ def hello_world():
 def predict():
     
     
-    features = [abs(int(x)) for x in request.form.values()]
+    features = [int(x) for x in request.form.values()]
 
     print(features)
     final = np.array([features]).reshape((1,6))
